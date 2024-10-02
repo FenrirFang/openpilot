@@ -534,7 +534,7 @@ FW_VERSIONS = {
       b'\xf1\x00CD ESC \x03 102\x18\x08\x05 58920-J7350',
     ],
   },
-    CAR.KIA_FORTE: {
+  CAR.KIA_FORTE: {
     (Ecu.eps, 0x7d4, None): [
       b'\xf1\x00BD  MDPS C 1.00 1.02 56310-XX000 4BD2C102',
       b'\xf1\x00BD  MDPS C 1.00 1.08 56310/M6300 4BDDC108',
