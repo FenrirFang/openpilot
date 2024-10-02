@@ -534,7 +534,7 @@ FW_VERSIONS = {
       b'\xf1\x00CD ESC \x03 102\x18\x08\x05 58920-J7350',
     ],
   },
-  CAR.KIA_FORTE: {
+    CAR.KIA_FORTE: {
     (Ecu.eps, 0x7d4, None): [
       b'\xf1\x00BD  MDPS C 1.00 1.02 56310-XX000 4BD2C102',
       b'\xf1\x00BD  MDPS C 1.00 1.08 56310/M6300 4BDDC108',
@@ -549,6 +549,22 @@ FW_VERSIONS = {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00BDPE_SCC FHCUPC     1.00 1.04 99110-M6500\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'\xf1\x00BD__ SCC H-CUP      1.00 1.02 99110-M6000         ',
+    ],
+    (Ecu.engine, 0x7e0, None): [
+      b'\x01TBDM1NU06F200H01',
+      b'391182B945\x00',
+      b'\xf1\x81616F2051\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+    (Ecu.abs, 0x7d1, None): [
+      b'\xf1\x00\x00\x00\x00\x00\x00\x00',
+      b'\xf1\x816VGRAH00018.ELF\xf1\x00\x00\x00\x00\x00\x00\x00',
+      b'\xf1\x8758900-M7AB0 \xf1\x816VQRAD00127.ELF\xf1\x00\x00\x00\x00\x00\x00\x00',
+    ],
+    (Ecu.transmission, 0x7e1, None): [
+      b'\xf1\x006V2B0_C2\x00\x006V2C6051\x00\x00CBD0N20NL1\x00\x00\x00\x00',
+      b'\xf1\x006V2B0_C2\x00\x006V2C6051\x00\x00CBD0N20NL1\x90@\xc6\xae',
+      b'\xf1\x816U2VC051\x00\x00\xf1\x006U2V0_C2\x00\x006U2VC051\x00\x00DBD0T16SS0\x00\x00\x00\x00',
+      b"\xf1\x816U2VC051\x00\x00\xf1\x006U2V0_C2\x00\x006U2VC051\x00\x00DBD0T16SS0\xcf\x1e'\xc3",
     ],
   },
   CAR.KIA_K5_2021: {
