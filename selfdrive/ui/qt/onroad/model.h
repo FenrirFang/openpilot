@@ -15,7 +15,7 @@ public:
   void setTransform(const Eigen::Matrix3f &transform) { car_space_transform = transform; }
   void draw(QPainter &painter, const QRect &surface_rect);
 
-private:
+protected:
   bool mapToScreen(float in_x, float in_y, float in_z, QPointF *out);
   void mapLineToPolygon(const cereal::XYZTData::Reader &line, float y_off, float z_off,
                         QPolygonF *pvd, int max_idx, bool allow_invert = true);
@@ -23,7 +23,7 @@ private:
   void update_leads(const cereal::RadarState::Reader &radar_state, const cereal::XYZTData::Reader &line);
   void update_model(const cereal::ModelDataV2::Reader &model, const cereal::RadarState::LeadData::Reader &lead);
   void drawLaneLines(QPainter &painter);
-  void drawPath(QPainter &painter, const cereal::ModelDataV2::Reader &model, int heightt, int width);
+  void drawPath(QPainter &painter, const cereal::ModelDataV2::Reader &model, int height);
   void updatePathGradient(QLinearGradient &bg);
   QColor blendColors(const QColor &start, const QColor &end, float t);
 
@@ -40,6 +40,4 @@ private:
   QPointF lead_vertices[2] = {};
   Eigen::Matrix3f car_space_transform = Eigen::Matrix3f::Zero();
   QRectF clip_region;
-  QPolygonF left_blindspot_vertices;
-  QPolygonF right_blindspot_vertices;
 };
